@@ -8,6 +8,8 @@
 
     <property name="severity" value="warning" />
 
+
+
     <property name="fileExtensions" value="java, properties, xml" />
     <module name="FileTabCharacter">
         <property name="eachLine" value="true" />

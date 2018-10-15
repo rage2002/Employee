@@ -10,10 +10,7 @@ cache:
 script:
 - mvn clean test jacoco:report
   #coveralls:report
-#- npm run build --prefix frontend/
 - sonar-scanner
-before_script:
-#- npm install --prefix frontend/
 addons:
   sonarcloud:
     organization: rage2002-github

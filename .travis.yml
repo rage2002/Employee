@@ -6,12 +6,13 @@ cache:
   directories:
   - $HOME/.m2
 script:
-- mvn clean test jacoco:report coveralls:report
+- mvn clean test jacoco:report
+  #coveralls:report
 - npm run build --prefix frontend/
-- sonar-scanner
+#- sonar-scanner
 before_script:
 - npm install --prefix frontend/
-addons:
-  sonarcloud:
-    organization: final-project-group3
-    token: 47892d6a2e5dca6183a413dc00eb0567545fa1fc
+#addons:
+#  sonarcloud:
+#    organization: final-project-group3
+#    token: 47892d6a2e5dca6183a413dc00eb0567545fa1fc

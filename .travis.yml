@@ -5,14 +5,16 @@ jdk:
 cache:
   directories:
   - $HOME/.m2
+  - $HOME/.sonar
+  - $HOME/.sonarscanner
 script:
 - mvn clean test jacoco:report
   #coveralls:report
-- npm run build --prefix frontend/
-#- sonar-scanner
+#- npm run build --prefix frontend/
+- sonar-scanner
 before_script:
-- npm install --prefix frontend/
-#addons:
-#  sonarcloud:
-#    organization: final-project-group3
-#    token: 47892d6a2e5dca6183a413dc00eb0567545fa1fc
+#- npm install --prefix frontend/
+addons:
+  sonarcloud:
+    organization: rage2002-github
+    token: b576f6bcad19cda33b05a838ce79db2f8255d540
